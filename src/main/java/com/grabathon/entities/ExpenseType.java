@@ -6,10 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Data
@@ -25,6 +22,7 @@ public class ExpenseType {
 
     private String expenseValue;
 
+    @Enumerated(value = EnumType.STRING)
     private ExpenseAffectType effectType;
 
     private BigDecimal effectValue;

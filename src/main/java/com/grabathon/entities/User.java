@@ -8,10 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -28,7 +25,10 @@ public class User {
     private String mobileNumber;
     private String firstName;
     private String lastName;
+
+    @Enumerated(value = EnumType.STRING)
     private OccupationType occupationType;
+
     private Integer monthlyIncomeInThousands;
     private Instant dob;
     private String address;
