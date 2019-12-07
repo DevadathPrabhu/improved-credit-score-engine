@@ -3,6 +3,8 @@ package com.grabathon.entities;
 import com.grabathon.enums.OccupationType;
 import lombok.Data;
 
+import java.time.Instant;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,5 +24,7 @@ public class User {
     private String lastName;
     private OccupationType occupationType;
     private Integer monthlyIncomeInThousands;
+    private Instant dob;
+    private String address;
 
 }

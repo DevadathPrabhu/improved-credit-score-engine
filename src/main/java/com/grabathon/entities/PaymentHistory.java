@@ -28,5 +28,6 @@ public class PaymentHistory {
 	private Instant dueDate;
 	private Instant paymentDate;
 	private Double amount;
+	private Long userId;
 	
 }

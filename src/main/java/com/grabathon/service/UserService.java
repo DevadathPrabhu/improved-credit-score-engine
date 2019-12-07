@@ -23,12 +23,7 @@ public class UserService {
     UserRepository userRepository;
 	
     public User getUser(String emailId){
-        Optional<User> order = userRepository.findById(emailId);
-        if(order.isPresent()){
-            return order.get();
-        }
-        else
-            return null;
+        return userRepository.findByEmailId(emailId);
 
     }
 
