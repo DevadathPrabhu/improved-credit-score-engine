@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.grabathon.entities.User;
-import com.grabathon.repository.UserRepo;
+import com.grabathon.repository.UserRepository;
 
 /**
  * @author dprabhu
@@ -20,10 +20,10 @@ import com.grabathon.repository.UserRepo;
 public class UserService {
 	
 	@Autowired
-	UserRepo userRepo;
+    UserRepository userRepository;
 	
     public User getUser(String emailId){
-        Optional<User> order = userRepo.findById(emailId);
+        Optional<User> order = userRepository.findById(emailId);
         if(order.isPresent()){
             return order.get();
         }
