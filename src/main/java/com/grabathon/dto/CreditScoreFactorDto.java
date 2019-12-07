@@ -27,6 +27,7 @@ public class CreditScoreFactorDto {
 	private OccupationType occupationType;
 	private Boolean prominentPersonality;
 	private LocationHistoryBackground locationHistory;
+	private Long age;
 	
 	public CreditScoreFactorDto() {
 		super();
@@ -112,6 +113,12 @@ public class CreditScoreFactorDto {
 	}
 	public void setLocationHistory(LocationHistoryBackground locationHistory) {
 		this.locationHistory = locationHistory;
+	}
+	public Long getAge() {
+		return age;
+	}
+	public void setAge(Long age) {
+		this.age = age;
 	}
 	
 }

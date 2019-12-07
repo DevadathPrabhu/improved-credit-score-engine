@@ -17,7 +17,7 @@ public class PaymentHistoryService {
 	@Autowired
 	PaymentHistoryRepository paymentHistoryRepository;
 	
-	public Integer getPaymentDetails(PaymentStatus pmtStatus) {
+	public Integer getPaymentDetailsByUserId(Long userId, PaymentStatus pmtStatus) {
 		if(pmtStatus.equals(PaymentStatus.ONTIME)) {
 			// Fetch number of records for ONTIME payment
 		}
