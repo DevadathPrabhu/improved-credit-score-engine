@@ -69,7 +69,7 @@ public class DataCookingService {
 
         List<String> allNames = readNamesFromDataDump();
 
-        IntStream.range(1, 10).forEach(i -> {
+        IntStream.range(1, 1001).forEach(i -> {
             log.info("#createUsers :: creating users. count : {}", i);
             Random random = new Random();
             String fName = allNames.get(random.nextInt(allNames.size()));
