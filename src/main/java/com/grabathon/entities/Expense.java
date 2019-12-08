@@ -23,7 +23,7 @@ public class Expense {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long userId;
-    private Instant expenseTypes;
+    private Instant expenseTs;
     private Long expenseTypeId;
     private BigDecimal amountSpent;
 
